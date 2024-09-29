@@ -45,7 +45,7 @@ public:
 void print(Movie);
 
 int main(){
-	ofstream fout;
+	ifstream fout;
 	fout.open("input.txt");
 	Movie 
 
