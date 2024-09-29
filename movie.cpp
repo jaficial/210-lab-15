@@ -2,7 +2,7 @@
 // https://github.com/jaficial/210-lab-15
 
 #include <iostream>
-
+#include <fstream>
 using namespace std;
 
 /* NOTE: movie class needs these functions:
@@ -12,6 +12,10 @@ using namespace std;
  * print add print function
  *
  * input has to come from the provided input file
+ *
+ * read the data into a temp Movie object, then append the object to a container
+ * container can be either an <array> class array, or a <vector> class vector
+ * all four movie objects have to be in the array/vector
  * */
 
 class Movie {
@@ -27,10 +31,22 @@ public:
 	int get_year_released() {return year_released;}
 	void set_year(int year) {year_released = year;}
 
-	string screen_writer
+	string screen_writer() {return screen_writer;}
+	void set_writer(string writer) {screen_writer = writer;}
 
+	// COME BACK TO THIS FUNCTION AFTERWARDS
+	void print(){
+		cout << "nothing for right now" << endl;
+	}
 };
 
+void print(Movie);
 
+int main(){
+	ofstream fout;
+	fout.open("input.txt");
+	
 
-
+	fout.close("input.txt");
+	return 0;
+}
