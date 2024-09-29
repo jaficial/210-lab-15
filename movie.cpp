@@ -46,6 +46,7 @@ void print(Movie);
 
 // NOTE: to READ a line of STRING DATA: getline(fin, var_name);
 //	 to READ a line of INT DATA: fin >> var_name;
+//	 fin.ignore anytime between "fin >>" and "getline()"
 int main(){
 	ifstream fin ("input.txt");
 	array<Movie, 4> movies;
@@ -56,10 +57,11 @@ int main(){
 	
 	int i = 0; // iterator
 	if (fin.good()){
-		while (fin >> g){
+		while (getline(fin, temp_title)){
 			fin.ignore();
-			getline(fin, n);
-			fin >> 
+			fin >> temp_year;
+
+			break;
 		}
 	}
 
