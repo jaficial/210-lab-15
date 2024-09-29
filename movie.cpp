@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <array>
+
 using namespace std;
 
 /* NOTE: movie class needs these functions:
@@ -45,7 +47,7 @@ void print(Movie);
 int main(){
 	ofstream fout;
 	fout.open("input.txt");
-	
+	Movie 
 
 	fout.close("input.txt");
 	return 0;
