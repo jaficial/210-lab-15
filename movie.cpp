@@ -5,4 +5,11 @@
 
 using namespace std;
 
-
+/* NOTE: movie class needs these functions:
+ * string screen writer
+ * int year released
+ * string title 
+ * print add print function
+ *
+ * input has to come from the provided input file
+ * */
