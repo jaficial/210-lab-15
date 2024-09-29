@@ -44,10 +44,24 @@ public:
 
 void print(Movie);
 
+// NOTE: to READ a line of STRING DATA: getline(fin, var_name);
+//	 to READ a line of INT DATA: fin >> var_name;
 int main(){
-	ifstream fout;
-	fout.open("input.txt");
-	Movie 
+	ifstream fin ("input.txt");
+	array<Movie, 4> movies;
+	
+	string temp_title;
+	int temp_year;
+	string temp_writer;
+	
+	int i = 0; // iterator
+	if (fin.good()){
+		while (fin >> g){
+			fin.ignore();
+			getline(fin, n);
+			fin >> 
+		}
+	}
 
 	fout.close("input.txt");
 	return 0;
