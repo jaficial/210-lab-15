@@ -78,7 +78,7 @@ int main(){
 		}
 	}*/
 
-	// FOR INDEX 0:
+	// FOR INDEX 0: WORKING
 	getline(fin, temp_writer);
 	fin.ignore();
 	fin >> temp_year;
@@ -92,7 +92,7 @@ int main(){
 
 	movies[0] = temp_object;
 
-	// FOR INDEX 1:
+	// FOR INDEX 1: WORKING
 	getline(fin, temp_writer);
 	fin.ignore();
 	fin >> temp_year;
