@@ -5,7 +5,7 @@
 #include <fstream>
 using namespace std;
 
-const int W15 = 15, SIZE = 5;
+const int W15 = 15, SIZE = 3;
 
 class Student {
 private:
