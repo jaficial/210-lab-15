@@ -57,7 +57,9 @@ int main(){
 	string temp_writer;
 	
 	int i = 0; // iterator
-	if (fin.good()){
+	
+	// NEED TO COME BACK AND FIX THIS
+	/*if (fin.good()){
 		while (getline(fin, temp_writer)){
 			fin.ignore();
 			fin >> temp_year;
@@ -70,10 +72,38 @@ int main(){
 			temp_object.set_writer(temp_writer);
 
 			movies[i] = temp_object;
+			//fin.ignore();
 			i++;
 			break;
 		}
-	}
+	}*/
+
+	// FOR INDEX 0:
+	getline(fin, temp_writer);
+	fin.ignore();
+	fin >> temp_year;
+	fin.ignore();
+	getline(fin, temp_title);
+
+	Movie temp_object;
+	temp_object.set_title(temp_title);
+	temp_object.set_year(temp_year);
+	temp_object.set_writer(temp_writer);
+
+	movies[0] = temp_object;
+
+	// FOR INDEX 1:
+	getline(fin, temp_writer);
+	fin.ignore();
+	fin >> temp_year;
+	fin.ignore();
+	getline(fin, temp_title);
+
+	temp_object.set_title(temp_title);
+	temp_object.set_year(temp_year);
+	temp_object.set_writer(temp_writer);
+
+	movies[1] = temp_object;
 
 	fin.close();
 	
@@ -81,7 +111,8 @@ int main(){
 	for (auto var : movies){
 		cout << "This should be the movie title: " << var.get_movie_title() << endl;
 		cout << "This should be the screen writer: " << var.get_screen_writer() << endl;
-		cout << "This shoudl be the year released: " << var.get_year_released() << endl;
+		cout << "This should be the year released: " << var.get_year_released() << endl;
+		cout << endl;
 	}
 
 	return 0;
