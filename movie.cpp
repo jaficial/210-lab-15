@@ -58,11 +58,11 @@ int main(){
 	
 	int i = 0; // iterator
 	if (fin.good()){
-		while (getline(fin, temp_title)){
+		while (getline(fin, temp_writer)){
 			fin.ignore();
 			fin >> temp_year;
 			fin.ignore();
-			getline(fin, temp_writer);
+			getline(fin, temp_title);
 
 			Movie temp_object;
 			temp_object.set_title(temp_title);
@@ -79,7 +79,9 @@ int main(){
 	
 	// NOTE: testing printing out the class members
 	for (auto var : movies){
-		cout << var.get_movie_title() << endl;
+		cout << "This should be the movie title: " << var.get_movie_title() << endl;
+		cout << "This should be the screen writer: " << var.get_screen_writer() << endl;
+		cout << "This shoudl be the year released: " << var.get_year_released() << endl;
 	}
 
 	return 0;
