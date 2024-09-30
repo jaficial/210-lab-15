@@ -59,9 +59,8 @@ int main(){
 	int i = 0; // iterator
 	
 	// NEED TO COME BACK AND FIX THIS
-	/*if (fin.good()){
+	if (fin.good()){
 		while (getline(fin, temp_writer)){
-			fin.ignore();
 			fin >> temp_year;
 			fin.ignore();
 			getline(fin, temp_title);
@@ -74,13 +73,13 @@ int main(){
 			movies[i] = temp_object;
 			//fin.ignore();
 			i++;
-			break;
+			
 		}
-	}*/
+
+	}
 
 	// FOR INDEX 0: WORKING
-	getline(fin, temp_writer);
-	fin.ignore();
+	/*getline(fin, temp_writer);
 	fin >> temp_year;
 	fin.ignore();
 	getline(fin, temp_title);
@@ -94,7 +93,6 @@ int main(){
 
 	// FOR INDEX 1: WORKING
 	getline(fin, temp_writer);
-	fin.ignore();
 	fin >> temp_year;
 	fin.ignore();
 	getline(fin, temp_title);
@@ -103,8 +101,8 @@ int main(){
 	temp_object.set_year(temp_year);
 	temp_object.set_writer(temp_writer);
 
-	movies[1] = temp_object;
-
+	movies[1] = temp_object;*/
+	// ---------------------------------------
 	fin.close();
 	
 	// NOTE: testing printing out the class members
