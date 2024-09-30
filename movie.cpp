@@ -76,5 +76,11 @@ int main(){
 	}
 
 	fin.close();
+	
+	// NOTE: testing printing out the class members
+	for (auto var : movies){
+		cout << var.get_movie_title() << endl;
+	}
+
 	return 0;
 }
