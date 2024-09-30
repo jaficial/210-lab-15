@@ -38,30 +38,36 @@ public:
 //	cout << val.getname();
 //	cout << val.getID();
 // }
-int main() 
-    // declarations
+int main(){ 
+	// declarations
     cout << fixed << setprecision(2);
     
     //using both vector and array methods
     vector<Student> students_v;
     array<Student, SIZE> students_a;
 
-    ifstream fin ("input.txt");
+    ifstream fin ("input2.txt");
     double g;  // holds temporary GPA
     int l;     // holds temporary load
     string n;  // holds temporary name
     int i = 0; // temporary index
 	
-    // tests to make sure that file is all good
+    // tests to make sure that file is all good, testing for readable data
     if (fin.good()) {
         while (fin >> g) {
             fin.ignore();
             getline(fin, n);
             fin >> l; 
+	
+	    // uses temporary student object, afterwards, push the object into the vector
+	    // right under, "students_a[i] = tmp" is how to append the object to an array type
             Student tmp;
             tmp.setGPA(g);
             tmp.setName(n);
             tmp.setCourseLoad(l);
+
+	    // vector method doesnt need an iterator, just push in object 
+	    // array needs an iterator
             students_v.push_back(tmp);
             students_a[i] = tmp;
             i++;
