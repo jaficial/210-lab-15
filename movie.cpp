@@ -2,6 +2,7 @@
 // https://github.com/jaficial/210-lab-15
 
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <array>
 
@@ -21,7 +22,7 @@ using namespace std;
  * */
 
 class Movie {
-pritvate:
+private:
 	string movie_title;
 	int year_released;
 	string screen_writer;
@@ -33,7 +34,7 @@ public:
 	int get_year_released() {return year_released;}
 	void set_year(int year) {year_released = year;}
 
-	string screen_writer() {return screen_writer;}
+	string get_screen_writer() {return screen_writer;}
 	void set_writer(string writer) {screen_writer = writer;}
 
 	// COME BACK TO THIS FUNCTION AFTERWARDS
@@ -60,11 +61,20 @@ int main(){
 		while (getline(fin, temp_title)){
 			fin.ignore();
 			fin >> temp_year;
+			fin.ignore();
+			getline(fin, temp_writer);
 
+			Movie temp_object;
+			temp_object.set_title(temp_title);
+			temp_object.set_year(temp_year);
+			temp_object.set_writer(temp_writer);
+
+			movies[i] = temp_object;
+			i++;
 			break;
 		}
 	}
 
-	fout.close("input.txt");
+	fin.close();
 	return 0;
 }
