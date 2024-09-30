@@ -41,7 +41,7 @@ public:
 	void print(){
 		cout << "Movie: " << movie_title << endl;
 		cout << setw(18) << "Year released: " << year_released << endl;
-		cout << setw(18) << "Screenwriter: " << screen_writer << endl;
+		cout << setw(17) << "Screenwriter: " << screen_writer << endl;
 	}
 };
 
@@ -57,10 +57,8 @@ int main(){
 	string temp_title;
 	int temp_year;
 	string temp_writer;
+	int i = 0; 
 	
-	int i = 0; // iterator
-	
-	// NEED TO COME BACK AND FIX THIS
 	if (fin.good()){
 		while (getline(fin, temp_writer)){
 			fin >> temp_year;
@@ -74,46 +72,18 @@ int main(){
 
 			movies[i] = temp_object;
 			i++;
-			
 		}
+	}
+	else{
+		cout << "Invalid File and/or File Not Found." << endl;
 
 	}
-
-	// FOR INDEX 0: WORKING
-	/*getline(fin, temp_writer);
-	fin >> temp_year;
-	fin.ignore();
-	getline(fin, temp_title);
-
-	Movie temp_object;
-	temp_object.set_title(temp_title);
-	temp_object.set_year(temp_year);
-	temp_object.set_writer(temp_writer);
-
-	movies[0] = temp_object;
-
-	// FOR INDEX 1: WORKING
-	getline(fin, temp_writer);
-	fin >> temp_year;
-	fin.ignore();
-	getline(fin, temp_title);
-
-	temp_object.set_title(temp_title);
-	temp_object.set_year(temp_year);
-	temp_object.set_writer(temp_writer);
-
-	movies[1] = temp_object;*/
-	// ---------------------------------------
 	fin.close();
-	
-	// NOTE: testing printing out the class members
-	
-	for (auto var : movies){
-		cout << "This should be the movie title: " << var.get_movie_title() << endl;
-		cout << "This should be the screen writer: " << var.get_screen_writer() << endl;
-		cout << "This should be the year released: " << var.get_year_released() << endl;
+
+	// movie_num represents an object including members to that object
+	for (auto movie_num : movies){
+		movie_num.print();
 		cout << endl;
-		
 	}
 
 	return 0;
