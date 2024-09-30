@@ -39,7 +39,9 @@ public:
 
 	// COME BACK TO THIS FUNCTION AFTERWARDS
 	void print(){
-		cout << "nothing for right now" << endl;
+		cout << "Movie: " << movie_title << endl;
+		cout << setw(18) << "Year released: " << year_released << endl;
+		cout << setw(18) << "Screenwriter: " << screen_writer << endl;
 	}
 };
 
@@ -71,7 +73,6 @@ int main(){
 			temp_object.set_writer(temp_writer);
 
 			movies[i] = temp_object;
-			//fin.ignore();
 			i++;
 			
 		}
@@ -106,11 +107,13 @@ int main(){
 	fin.close();
 	
 	// NOTE: testing printing out the class members
+	
 	for (auto var : movies){
 		cout << "This should be the movie title: " << var.get_movie_title() << endl;
 		cout << "This should be the screen writer: " << var.get_screen_writer() << endl;
 		cout << "This should be the year released: " << var.get_year_released() << endl;
 		cout << endl;
+		
 	}
 
 	return 0;
